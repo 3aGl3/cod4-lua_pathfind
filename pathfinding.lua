@@ -33,7 +33,7 @@ function LoadWaypointsInternal()
 	-- attempt to load the given file
 	local file, error = io.open( fname )
 	if error then
-		Plugin_Scr_Error( "LoadWaypointsInternal: Unable to load waypoints from '".. fname .."'\n" )
+		Plugin_Scr_Error( "LoadWaypointsInternal: Unable to load waypoints from '".. fname .."', Error: ".. error .."\n" )
 		return
 	end
 
@@ -94,7 +94,7 @@ function LoadNavmeshInternal()
 	-- attempt to load the given file
 	local file, error = io.open( fname )
 	if error then
-		Plugin_Scr_Error( "LoadNavmeshInternal: Unable to load navmesh from '".. fname .."'\n" )
+		Plugin_Scr_Error( "LoadNavmeshInternal: Unable to load navmesh from '".. fname ..", Error: ".. error .."\n" )
 		return
 	end
 
